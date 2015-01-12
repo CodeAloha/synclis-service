@@ -1,0 +1,82 @@
+/**
+ * Default Look and Feel
+ 
+.alertify,
+.alertify-log {
+	font-family: sans-serif;
+}*/
+.alertify {
+	background: #FFF;
+	border: 1px solid #ccc; /* browsers that don't support rgba */
+	border-radius: 3px;
+	box-shadow: 0 3px 3px rgba(0,0,0,.3);
+	-webkit-background-clip: padding;     /* Safari 4? Chrome 6? */
+	   -moz-background-clip: padding;     /* Firefox 3.6 */
+	        background-clip: padding-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+	.alertify-text {
+		border: 1px solid #CCC;
+		padding: 10px;
+		border-radius: 4px;
+	}
+	
+    .alertify-button {
+		border: 1px solid #ddd;
+		background: #f0f0f0;
+		-webkit-box-shadow: 2px 2px 2px 1px rgba(220,220,220,1);
+		   -moz-box-shadow: 2px 2px 2px 1px rgba(220,220,220,1);
+		        box-shadow: 2px 2px 2px 1px rgba(220,220,220,1);
+		border-radius: 3px;
+		transition: color 0.4s;
+		color: #777;
+	}
+	.alertify-button:hover,
+	.alertify-button:focus {
+		-webkit-box-shadow: inset 2px 2px 2px 1px rgba(220,220,220,1);
+		   -moz-box-shadow: inset 2px 2px 2px 1px rgba(220,220,220,1);
+		        box-shadow: inset 2px 2px 2px 1px rgba(220,220,220,1);
+		color: #222;
+	}
+	
+	
+		.alertify-log-custom {
+			background: #6666ff;
+		}
+	
+
+	.alertify-button:active {
+		position: relative;
+	}
+		.alertify-button-cancel,
+		.alertify-button-cancel:hover,
+		.alertify-button-cancel:focus {
+
+		}
+		.alertify-button-ok,
+		.alertify-button-ok:hover,
+		.alertify-button-ok:focus {
+		}
+
+.alertify-log {
+	background: #eee;
+	padding: 15px;
+	border-radius: 4px;
+	color: #444;
+		-webkit-box-shadow: 2px 2px 2px 1px rgba(170,170,170,0.6);
+		   -moz-box-shadow: 2px 2px 2px 1px rgba(170,170,170,0.6);
+		        box-shadow: 2px 2px 2px 1px rgba(170,170,170,0.6);
+}
+	.alertify-log-error {
+		border-radius: 3px;
+		background: #ff6666;
+		background: rgba(205,102,102,.5);
+
+	}
+	.alertify-log-success {
+		border-radius: 3px;
+		color: #222;
+		background-color: #cde69c;
+		border-color: #a5d24a;
+		opacity: 0.9;
+
+	}

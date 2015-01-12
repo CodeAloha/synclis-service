@@ -1,0 +1,69 @@
+	
+	<div id ="synclis-console"></div>
+	<script type="text/javascript">
+		submit();
+			
+
+		function submit(){
+			var http = new XMLHttpRequest();
+			http.open("POST", "https://synclis.com/api/sys/plugin", true);
+			var params = "image="+ "http://synclis.com/media/logo.png" +
+				      "&content="+ "Test Content";
+		   	//Send the proper header information along with the request
+			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			http.onreadystatechange = function() {//Call a function when the state changes.
+				if(http.readyState == 4 && http.status == 200)
+				{
+					try{
+						var json = JSON.parse(http.responseText);
+						if(json.response == 'error')
+							document.getElementById("synclis-console").innerHTML += "<i style='color:#f88'>ERROR: "+ json.message +"</i><br/>";
+						else if(json.response == 'success'){
+							document.getElementById("synclis-console").innerHTML +="<i style='color:#44f; font-style:normal;'>[OK]: "+ json.iframeid +"</i><br/>";
+						}
+						else
+							alert(http.responseText);
+					}catch(e){
+						alert(http.responseText);
+					}
+				}
+			}
+			http.send(params);
+		}
+	function randomString(length, chars) {
+		var result = '';
+		for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+		return result;
+	}
+		function postImage(){
+			var imginc = '';
+			if(document.getElementById("image1").src != 'http://synclis.com/CreateListing/draganddrop.png') imginc = document.getElementById("image1").src;
+				else imginc = '';
+			var alt = "";
+			var http = new XMLHttpRequest();
+			
+			http.open("POST", "https://synclis.com/api/sys/imgupload", true);
+			var params = "id=<?php echo $uniqkey; ?>&description="+ alt + "&image=" + imginc;
+
+			//Send the proper header information along with the request
+			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			http.onreadystatechange = function() {//Call a function when the state changes.
+				if(http.readyState == 4 && http.status == 200)
+				{
+					try{
+						var json = JSON.parse(http.responseText);
+						if(json.response == 'error')
+							alert("ERROR: " + json.message);
+						else{
+							document.getElementById("reloaded").click();
+						}
+					}catch(e){
+						alert(http.responseText);
+					}
+				}
+			}
+			http.send(params);
+		}
+	
+	</script> 
+    

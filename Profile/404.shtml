@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Synclis | 404</title>
+	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://synclis.com/About/demoPage.css" />
+	<link rel="stylesheet" type="text/css" href="https://synclis.com/About/callback.css" />
+</head>
+<body onLoad="fadeInElement('logo',500,1500); fadeInElement('bg',3000,2000,0.85); fadeInElement('discover',4000,1000,1); fadeInElement('slogan',2000,1000,1);">
+	<!--LOGIN INTRODUCTION-->
+	<div class="section " id="section0" style="background:url(https://synclis.com/About/bg.jpg);  background-position:center; background-size: 100% 100%;">
+		<div style= "background: white; position: absolute; top:0; left:0; right:0; bottom:0; opacity:1;" id="bg">
+			<div style="margin: auto; position: absolute; top:0; left:0; bottom:0; right:0; height: 400px; width:50%;">
+			<img src="https://synclis.com/About/logo.png" style="opacity:0;"  id="logo" />
+			
+			<p style="font-size: 16px;">
+				<div id="slogan" style="opacity:0; font-size: 140%;"><i style="color:#1FB5AC; font-style:normal;">404: Unable to find this user.</i><br/>
+				This user does not exist.<br/><br/>
+				<input style= "padding: 5px; font-family: 'Open Sans', 'Lucida Sans', Arial; border: 2px solid #ccc;" placeholder="Search"></input>
+				</div> <br/><br/><br/>
+			</p>
+			</div>
+		</div>
+	</div>
+	<!--END LOGIN INTRODUCTION-->
+
+</body>
+
+<script>
+	function fadeInElement(id,delay,span,level){
+		setTimeout(function(){
+			document.getElementById(id).style.transform = 'translate3d(0, 0, 0)';
+			document.getElementById(id).style.webkitTransform = 'translate3d(0, 0, 0)';
+			document.getElementById(id).style.transition="opacity " + span + "ms";
+			document.getElementById(id).style.WebkitTransition="opacity " + span + "ms";
+			document.getElementById(id).style.MozTransition="opacity " + span + "ms";
+			document.getElementById(id).style.oTransition="opacity " + span + "ms";
+			if(level)
+				document.getElementById(id).style.opacity=level;
+			else document.getElementById(id).style.opacity="1";
+		},delay);
+	}
+</script>
+
+</html>

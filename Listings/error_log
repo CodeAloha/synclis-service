@@ -1,0 +1,2 @@
+[29-Jul-2014 05:38:27] PHP Warning:  file_get_contents(http://ipinfo.io/66.249.74.100) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+ in /home2/brosephs/public_html/meta.php on line 29

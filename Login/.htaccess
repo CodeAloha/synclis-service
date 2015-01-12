@@ -1,0 +1,16 @@
+ErrorDocument 404 https://synclis.com/404.shtml
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^Activate/([^/.]+)/?$ Activate.php?c=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ResetPass/([^/.]+)/?$ ResetPass.php?c=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+</IfModule>

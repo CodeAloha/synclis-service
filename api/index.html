@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html>
+  <head>
+
+    <meta charset="utf-8"/>
+    <title>Synclis API</title>
+    <meta name="description" content="Synclis API"/>
+    <meta property="og:description" content="Simple, lightweight Flat Surface Shader for rendering lit triangles."/>
+    <meta property="og:image" content="https://synclis.com/media/symbol.png"/>
+    <meta property="og:site_name" content="Synclis API"/>
+    <meta property="og:title" content="Synclis API"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://api.synclis.com/">
+    <link rel="stylesheet" type="text/css" href="assets/styles/styles.css"></link>
+	<link rel="shortcut icon" href="https://synclis.com/favicon.ico" />
+    <style>
+			input, select{
+				-webkit-transform: translate3d(0, 0, 0);
+				width:94%; padding: 3%;
+				font-size: 15px;
+				border-radius: 3px;
+				border: 1px solid #fff;
+				transition: all 0.4s;
+				-webkit-transition: all 0.4s;
+			}
+			input:focus, select:focus{
+				width:92%; padding: 3% 4% 3% 4%;
+				border: 1px solid #1FB5AC;
+			}
+			button{
+				border-radius: 3px;
+			-webkit-box-shadow: 2px 2px 2px 1px rgba(42, 120, 105, 1);
+			   -moz-box-shadow: 2px 2px 2px 1px rgba(42, 120, 105, 1);
+					box-shadow: 2px 2px 2px 1px rgba(42, 120, 105, 1);
+				background: #16a085;
+				border: none;
+				color: white;
+				padding: 8px;
+				margin-top: 12px;
+				width: 100%;
+				-webkit-transition: background 0.4s;
+				transition: background 0.4s;
+				-moz-transition: background 0.4s;
+			}
+			button:hover{
+		-webkit-box-shadow: inset 2px 2px 2px 1px rgba(42, 120, 105, 1);
+		   -moz-box-shadow: inset 2px 2px 2px 1px rgba(42, 120, 105, 1);
+		        box-shadow: inset 2px 2px 2px 1px rgba(42, 120, 105, 1);
+				background: #6DD0BC;
+			}
+    </style>
+
+  </head>
+  <body>
+
+    <div id="container" class="container">
+      <div id="output" class="container">
+      </div>
+      <div id="vignette" class="overlay vignette">
+      </div>
+      <div id="noise" class="overlay noise">
+      </div>
+      <div id="ui" class="wrapper">
+        <header id="header" class="header">
+          <img class="logo" src="assets/logo.png">
+        </header>
+        <article id="information" class="information">
+			<div style="border: 1px solid #fff; border-radius: 5px;">
+				<div style = "padding: 16px; background: rgba(255,255,255,0.9); color: #444; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;">
+					<!--Sign Up for a Synclis API Key<br/-->
+					<span style="color: #ff5555;">Synclis API is currently unavailable.</span>
+				</div>
+				<div style = "background: rgba(235,235,235,0.9); padding: 16px;">
+					<input id = "user" type = "text" placeholder="Name of Application"  /><br/>
+					<select style="width:100%;">
+						<option>Select Application</option>
+						<option>A Web Application</option>
+						<option>A Phone Application</option>
+						<option>Other</option>
+					</select>
+					<input id = "user" type = "text" placeholder="Your Website"  /><br/>
+					<input id = "user" type = "text" placeholder="Purpose" /><br/>
+				</div>
+				<div style = "padding: 16px; background: rgba(255,255,255,0.9)">
+					<button type="submit">Sign up as developer</button>
+				</div>
+			</div>
+        </article>
+      </div>
+
+    </div>
+
+
+    <script src="assets/fss.min.js"></script>
+    <script src="assets/scripts/example.js"></script>
+
+  </body>
+</html>

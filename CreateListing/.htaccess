@@ -1,0 +1,19 @@
+<FilesMatch ".(jpg|png|gif)$">
+ErrorDocument 404 "https://synclis.com/MyListings/no-photo.png"
+</FilesMatch>
+ErrorDocument 403 https://synclis.com/403.shtml
+ErrorDocument 500 https://synclis.com/500.shtml
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/.]+)/([^/.]+)/?$ index.php?s=$1&c=$2 [L]
+
+
+</IfModule>

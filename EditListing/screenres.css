@@ -1,0 +1,12 @@
+	.hidemob { display: block;}
+	.centertext { font-style:normal;display:inline; }
+	@media screen and (max-width: 1200px) {
+		.centertext { display: none;}
+	}
+	@media screen and (max-width: 1000px) {
+		.hidemob { display: none;}
+	}
+
+	@media screen and (max-width: 767px) {
+		.centertext { display:inline;}
+	}
